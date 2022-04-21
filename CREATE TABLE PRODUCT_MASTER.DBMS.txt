@@ -1,0 +1,13 @@
+create table PRODUCT_MASTER(PRODUCTNO varchar2(6),DESCRIPTION varchar2(15),PROFITPERCENT number(4,2),UNITMEASURE varchar2(10),QTYONHAND number(8),REORDERLVL number(8,2),SELLPRICE number(8,2),COSTPRICE number(8,2));
+
+select * from PRODUCT_MASTER;
+
+insert into PRODUCT_MASTER values('P00001','1.44floppies',5,'piece',200,50,350,250)
+insert into PRODUCT_MASTER values('P03456','monitors',5,'piece',150,50,500,350)
+insert into PRODUCT_MASTER values('P08865','mouse',5,'piece',100,20,600,450)
+insert into PRODUCT_MASTER values('P08865','1.22floppies',5,'piece',100,20,750,500)
+insert into PRODUCT_MASTER values('P08865','keyboard',2,'piece',150,50,850,550)
+insert into PRODUCT_MASTER values('P08865','CDDRIVE',2.5,'piece',80,30,700,450)
+insert into PRODUCT_MASTER values('P08865','540 HDD',4,'piece',100,40,350,250)
+insert into PRODUCT_MASTER values('P08865','144Drive',5,'piece',70,30,300,175)
+insert into PRODUCT_MASTER values('P08865','1.22Drive',5,'piece',75,30,450,300)
