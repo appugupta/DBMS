@@ -1,0 +1,24 @@
+CREATE TABLE Student (
+    Rollno number(10),
+    Name varchar(25),
+    Sub1 number(10),
+    Sub2 number(10),
+    Sub3 number(10),
+    Sub4 number(10),
+    Sub5 number(10)
+);
+INSERT INTO Student (Rollno, Name, Sub1, Sub2, Sub3, Sub4, Sub5)
+VALUES ('1', 'Aman', '55', '57', '72', '68', '65');
+
+INSERT INTO Student (Rollno, Name, Sub1, Sub2, Sub3, Sub4, Sub5)
+VALUES ('2', 'Aditya', '45', '37', '65', '68', '72');
+
+INSERT INTO Student (Rollno, Name, Sub1, Sub2, Sub3, Sub4, Sub5)
+VALUES ('2', 'Shivam', '55', '57', '72', '68', '65');
+
+INSERT INTO Student (Rollno, Name, Sub1, Sub2, Sub3, Sub4, Sub5)
+VALUES ('2', 'Raghav', '45', '37', '65', '68', '72');
+
+select*from student
+
+select Rollno,Name,Sub1,Sub2,Sub3,Sub4,Sub5,Sub1+Sub2+SUb3+Sub4+Sub5 as "total marks" from Student
