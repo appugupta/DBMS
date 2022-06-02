@@ -1,0 +1,78 @@
+create table Employees (EmpID VARCHAR2(3) Check (EmpId LIKE 'E%') primary key ,
+Ename VARCHAR2(25) not null ,
+DOB date not null,
+DOJ date not null,
+salary number(7) not null)
+
+insert into employees VALUES ('E01','John','10-Oct-1998','01-Apr-2015',8000)
+insert into employees VALUES ('E02','Alex','05-Jan-1998','01-Jul-2016',8000)
+insert into employees VALUES ('E03','Jenny','11-Oct-1999','01-Apr-2016',8000)
+insert into employees VALUES ('E04','Max','25-Dec-2000','03-Jan-2017',8000)
+insert into employees VALUES ('E05','Johnny','10-Oct-1997','01-Apr-2019',7000)
+
+SELECT *FROM Employees
+
+
+-- 1
+SELECT *
+FROM Employees
+WHERE  DOJ='01-Apr-2015';
+
+
+
+-- 2
+SELECT EmpID,
+       Ename,     
+			 to_char(DOJ,'MONTH DD YYYY')
+FROM employees;
+
+
+-- 3
+
+SELECT *
+FROM employees
+WHERE DOJ<('01-Jan-2018');
+
+
+-- 4
+
+SELECT *
+FROM employees
+WHERE to_char(DOJ, 'mon')='jan';
+
+-- 5
+
+SELECT *
+FROM employees
+WHERE to_char(DOJ,'yyyy')=2019; 
+
+
+-- 6
+
+SELECT *FROM employees ORDER BY DOJ DESC;
+
+-- 7
+
+select * from employees where mod(salary,2)=0
+
+-- 8
+SELECT *
+FROM employees
+WHERE mod(salary,2) = 1;
+
+-- 9
+
+SELECT *
+FROM employees
+WHERE to_char(DOJ,'YYYY') = '1991'
+  AND (EmpId ='E001' 
+       OR EmpId ='E10') ;
+			 
+--  10
+
+SELECT *
+FROM employees
+WHERE to_char(DOJ,'MON') NOT IN ('FEB');
+
+-- 11
+
